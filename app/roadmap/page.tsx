@@ -88,7 +88,7 @@ const RoadmapPage = () => {
       className="z-0 min-h-screen bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4 overflow-hidden"
     >
       <div className="w-full h-11"></div>
-      <h1 className="text-6xl md:text-7xl font-extrabold text-yellow-200 mb-16">
+      <h1 className="sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16">
         Roadmap
       </h1>
 

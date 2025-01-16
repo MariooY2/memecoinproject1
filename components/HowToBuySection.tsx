@@ -12,13 +12,13 @@ export default function HowToBuySection() {
       className="z-0 min-h-screen bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4"
     >
       <div className="w-full h-11"></div>
-      <h2 className="text-6xl md:text-7xl font-extrabold text-yellow-200 mb-16">
+      <h2 className="sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16">
         How to Buy
       </h2>
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-x-28 gap-y-28 relative">
         {/* Step 1 */}
         <div className="relative flex flex-col items-center">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <BiGhost className="text-2xl text-red-600" />
             </div>
@@ -45,7 +45,7 @@ export default function HowToBuySection() {
         </div>
         {/* Step 2 */}
         <div className="relative flex flex-col items-center">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <SiSolana className="text-2xl text-red-600" />
             </div>
@@ -70,7 +70,7 @@ export default function HowToBuySection() {
           </div>
         </div>
         <div className="relative flex flex-col items-center md:hidden block">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <BiSolidCoinStack className="text-2xl text-red-600" />
             </div>
@@ -97,7 +97,7 @@ export default function HowToBuySection() {
         </div>
         {/* Step 3 */}
         <div className="relative flex flex-col items-center md:block hidden">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <IoMdSwap className="text-2xl text-red-600" />
             </div>
@@ -120,7 +120,7 @@ export default function HowToBuySection() {
         </div>
         {/* Step 4 */}
         <div className="relative flex flex-col items-center md:block hidden">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <BiSolidCoinStack className="text-2xl text-red-600" />
             </div>
@@ -143,7 +143,7 @@ export default function HowToBuySection() {
           </div>
         </div>
         <div className="relative flex flex-col items-center md:hidden block">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <IoMdSwap className="text-2xl text-red-600" />
             </div>
@@ -160,8 +160,6 @@ export default function HowToBuySection() {
             </div>
           </div>
           {/* Down Arrow for smaller screens */}
-         
-          
         </div>
       </div>
     </section>
