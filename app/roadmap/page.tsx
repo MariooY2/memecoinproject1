@@ -71,7 +71,7 @@ const RoadmapPage = () => {
     },
   ];
 
-  const getStatusColor = (status:any) => {
+  const getStatusColor = (status) => {
     switch (status) {
       case "Completed":
         return "bg-green-500";
