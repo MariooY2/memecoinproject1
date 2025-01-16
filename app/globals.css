@@ -2,3 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes emberFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes firePulse {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(-50%) scale(2);
+    opacity: 1;
+  }
+}
+
+@keyframes flamePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.emberFloat {
+  animation: emberFloat 2s ease-in-out infinite;
+}
+
+.firePulse {
+  animation: firePulse 1.5s ease-in-out infinite;
+}
+
+.flamePulse {
+  animation: flamePulse 2s ease-in-out infinite;
+}
+
+.spinSlow {
+  animation: spin-slow 8s linear infinite;
+}

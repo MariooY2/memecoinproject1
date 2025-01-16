@@ -9,7 +9,7 @@ function NavBar() {
       <nav className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 text-white px-6 py-4 rounded-3xl shadow-2xl max-w-6xl w-full">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
-          <div className="text-3xl font-bold cursor-pointer">$HOT</div>
+          <div className="text-3xl font-bold cursor-pointer">HOTMOJI</div>
           <div className="sm:hidden flex items-cente px-4 py-2r">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -47,30 +47,35 @@ function NavBar() {
             <Link
               href="/"
               className="block text-center bg-white text-red-600 px-4 py-2 rounded-md hover:bg-gray-100 transition"
+              onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/howtobuy"
               className="block text-center bg-white text-red-600 px-4 py-2 rounded-md hover:bg-gray-100 transition"
+              onClick={() => setIsMenuOpen(false)}
             >
               How to Buy
             </Link>
             <Link
               href="/tokenomics"
               className="block text-center bg-white text-red-600 px-4 py-2 rounded-md hover:bg-gray-100 transition"
+              onClick={() => setIsMenuOpen(false)}
             >
               Tokenomics
             </Link>
             <Link
               href="/roadmap"
               className="block text-center bg-white text-red-600 px-4 py-2 rounded-md hover:bg-gray-100 transition"
+              onClick={() => setIsMenuOpen(false)}
             >
               Roadmap
             </Link>
             <Link
               href="#buy-now"
               className="block text-center bg-white text-red-600 px-4 py-2 rounded-md hover:bg-gray-100 transition font-bold"
+              onClick={() => setIsMenuOpen(false)}
             >
               Buy Now
             </Link>

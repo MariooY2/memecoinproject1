@@ -21,13 +21,13 @@ function HeroSection() {
           {/* Social Icons */}
           <div className="flex space-x-4 justify-center md:justify-start">
             <Link
-              href="#telegram"
+              href="https://t.me/+bgJzveg8wJE1NDFk"
               className="bg-white text-red-600 p-3 rounded-lg hover:bg-gray-100 transition flex items-center"
             >
               <BsTelegram className="text-xl" />
             </Link>
             <Link
-              href="#twitter"
+              href="https://x.com/H0TMEME"
               className="bg-white text-red-600 p-3 rounded-lg hover:bg-gray-100 transition flex items-center"
             >
               <BsTwitterX className="text-xl" />

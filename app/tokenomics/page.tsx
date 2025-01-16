@@ -12,7 +12,7 @@ const TokenomicsPage = () => {
   return (
     <section
       id="tokenomics"
-      className="min-h-screen  bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4"
+      className="min-h-screen  bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4 overflow-hidden"
     >
       <div className="w-full h-11"></div>
       <h1 className="text-6xl md:text-7xl font-extrabold text-yellow-200 mb-16">
@@ -41,7 +41,7 @@ const TokenomicsPage = () => {
                 </h3>
                 <p className="text-white/90 leading-relaxed">
                   $HOT implements a strategic 5% token burn for every milestone
-                  reached on Raydium. This deflationary mechanism helps increase
+                  reached on pump.fun . This deflationary mechanism helps increase
                   the value of remaining tokens while rewarding long-term
                   holders.
                 </p>

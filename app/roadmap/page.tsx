@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { FaRocket, FaChartLine } from "react-icons/fa";
 import { SiSolana } from "react-icons/si";
@@ -20,7 +20,7 @@ const RoadmapPage = () => {
     {
       icon: <FaRocket className="text-3xl" />,
       title: "Phase 1: Launch",
-      period: "Q1 2024",
+      period: "Q1 2025",
       items: [
         "Website Launch",
         "Social Media Launch",
@@ -33,7 +33,7 @@ const RoadmapPage = () => {
     {
       icon: <FaChartLine className="text-3xl" />,
       title: "Phase 2: Growth",
-      period: "Q2 2024",
+      period: "Q2 2025",
       items: [
         "CoinGecko Listing",
         "CoinMarketCap Listing",
@@ -46,7 +46,7 @@ const RoadmapPage = () => {
     {
       icon: <SiSolana className="text-3xl" />,
       title: "Phase 3: Expansion",
-      period: "Q3 2024",
+      period: "Q3 2025",
       items: [
         "Major CEX Listing",
         "Enhanced Utility Development",
@@ -59,7 +59,7 @@ const RoadmapPage = () => {
     {
       icon: <HiSparkles className="text-3xl" />,
       title: "Phase 4: Evolution",
-      period: "Q4 2024",
+      period: "Q4 2025",
       items: [
         "Global Marketing Campaign",
         "Strategic Partnerships",
@@ -85,7 +85,7 @@ const RoadmapPage = () => {
   return (
     <section
       id="roadmap"
-      className="z-0 min-h-screen bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4"
+      className="z-0 min-h-screen bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4 overflow-hidden"
     >
       <div className="w-full h-11"></div>
       <h1 className="text-6xl md:text-7xl font-extrabold text-yellow-200 mb-16">

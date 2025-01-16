@@ -4,14 +4,14 @@ import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { BiSolidCoinStack } from "react-icons/bi";
 import { SiSolana } from "react-icons/si";
 import { IoMdSwap } from "react-icons/io";
-
+import { BiGhost } from "react-icons/bi";
 export default function HowToBuySection() {
   return (
     <section
       id="how-to-buy"
       className="z-0 min-h-screen bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4"
     >
-        <div className="w-full h-11"></div>
+      <div className="w-full h-11"></div>
       <h2 className="text-6xl md:text-7xl font-extrabold text-yellow-200 mb-16">
         How to Buy
       </h2>
@@ -20,7 +20,7 @@ export default function HowToBuySection() {
         <div className="relative flex flex-col items-center">
           <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
-              <SiSolana className="text-2xl text-red-600" />
+              <BiGhost className="text-2xl text-red-600" />
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold text-yellow-200 mb-2">
@@ -69,41 +69,17 @@ export default function HowToBuySection() {
             <HiOutlineArrowDown className="text-8xl" />
           </div>
         </div>
-        {/* Step 3 */}
-        <div className="relative flex flex-col items-center">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
-            <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
-              <IoMdSwap className="text-2xl text-red-600" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-yellow-200 mb-2">
-                Swap Sol for HOT
-              </h3>
-              <p className="text-white text-opacity-90">
-                To purchase $HOT coin using Raydium, connect your Solana
-                wallet, navigate to the $HOT trading pair, enter the desired
-                amount, confirm the transaction, and receive $HOT tokens in
-                your wallet.
-              </p>
-            </div>
-          </div>
-          {/* Down Arrow for smaller screens */}
-          <div className="md:hidden flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowDown className="text-8xl" />
-          </div>
-        </div>
-        {/* Step 4 */}
-        <div className="relative flex flex-col items-center">
+        <div className="relative flex flex-col items-center md:hidden block">
           <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <BiSolidCoinStack className="text-2xl text-red-600" />
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold text-yellow-200 mb-2">
-                Go to Raydium
+                Connect Wallet to pump.fun
               </h3>
               <p className="text-white text-opacity-90">
-                Use Raydium or Phantom wallet to swap $SOL to $HOT instantly.
+                Use pump.fun or Phantom wallet to swap $SOL to $HOT instantly.
               </p>
             </div>
           </div>
@@ -115,6 +91,77 @@ export default function HowToBuySection() {
           <div className="md:hidden flex absolute top-1/2 -left-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
             <HiOutlineArrowDown className="text-8xl" />
           </div>
+          <div className="md:hidden flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
+            <HiOutlineArrowDown className="text-8xl" />
+          </div>
+        </div>
+        {/* Step 3 */}
+        <div className="relative flex flex-col items-center md:block hidden">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+            <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
+              <IoMdSwap className="text-2xl text-red-600" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-yellow-200 mb-2">
+                Swap Sol for HOT
+              </h3>
+              <p className="text-white text-opacity-90">
+                To purchase $HOT coin using Pump.fun, connect your Solana
+                wallet, navigate to the $HOT trading pair, enter the desired
+                amount, confirm the transaction, and receive $HOT tokens in your
+                wallet.
+              </p>
+            </div>
+          </div>
+          {/* Down Arrow for smaller screens */}
+          <div className="md:hidden flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
+            <HiOutlineArrowDown className="text-8xl" />
+          </div>
+        </div>
+        {/* Step 4 */}
+        <div className="relative flex flex-col items-center md:block hidden">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+            <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
+              <BiSolidCoinStack className="text-2xl text-red-600" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-yellow-200 mb-2">
+                Connect Wallet to pump.fun
+              </h3>
+              <p className="text-white text-opacity-90">
+                Use pump.fun or Phantom wallet to swap $SOL to $HOT instantly.
+              </p>
+            </div>
+          </div>
+          {/* Left Arrow for larger screens */}
+          <div className="hidden md:flex absolute top-1/2 -left-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
+            <HiOutlineArrowSmLeft className="text-8xl" />
+          </div>
+          {/* Down Arrow for smaller screens */}
+          <div className="md:hidden flex absolute top-1/2 -left-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
+            <HiOutlineArrowDown className="text-8xl" />
+          </div>
+        </div>
+        <div className="relative flex flex-col items-center md:hidden block">
+          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full h-64">
+            <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
+              <IoMdSwap className="text-2xl text-red-600" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-yellow-200 mb-2">
+                Swap Sol for HOT
+              </h3>
+              <p className="text-white text-opacity-90">
+                To purchase $HOT coin using Pump.fun, connect your Solana
+                wallet, navigate to the $HOT trading pair, enter the desired
+                amount, confirm the transaction, and receive $HOT tokens in your
+                wallet.
+              </p>
+            </div>
+          </div>
+          {/* Down Arrow for smaller screens */}
+         
+          
         </div>
       </div>
     </section>
