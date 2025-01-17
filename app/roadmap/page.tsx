@@ -7,7 +7,11 @@ import { HiSparkles } from "react-icons/hi";
 const RoadmapPage = () => {
   const [activePhase, setActivePhase] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
   useEffect(() => {
     setIsVisible(true);
     const timer = setInterval(() => {
@@ -88,9 +92,12 @@ const RoadmapPage = () => {
       className="z-0 min-h-screen bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4 overflow-hidden"
     >
       <div className="w-full h-11"></div>
-      <h1 className="sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16">
+      <h2
+        className={`sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16 transition-all duration-700 
+        ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      >
         Roadmap
-      </h1>
+      </h2>
 
       <div className="max-w-6xl w-full space-y-8">
         {phases.map((phase, index) => (

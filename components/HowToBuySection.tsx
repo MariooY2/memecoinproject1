@@ -1,3 +1,4 @@
+"use client";
 import { HiOutlineArrowDown, HiOutlineArrowSmDown } from "react-icons/hi";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
@@ -5,20 +6,38 @@ import { BiSolidCoinStack } from "react-icons/bi";
 import { SiSolana } from "react-icons/si";
 import { IoMdSwap } from "react-icons/io";
 import { BiGhost } from "react-icons/bi";
+import { useState, useEffect } from "react";
+
 export default function HowToBuySection() {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
+  const cardClasses = `flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl 
+    border border-white border-opacity-20 w-full lg:h-52 h-72 transition-all duration-700 
+    ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`;
+
+  const arrowClasses = `text-8xl transition-all duration-700 
+    ${animate ? "opacity-100 scale-100" : "opacity-0 scale-50"}`;
+
   return (
     <section
       id="how-to-buy"
       className="z-0 min-h-screen bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4"
     >
       <div className="w-full h-11"></div>
-      <h2 className="sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16">
+      <h2
+        className={`sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16 transition-all duration-700 
+        ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      >
         How to Buy
       </h2>
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-x-28 gap-y-28 relative">
         {/* Step 1 */}
         <div className="relative flex flex-col items-center">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
+          <div className={cardClasses} style={{ transitionDelay: "200ms" }}>
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <BiGhost className="text-2xl text-red-600" />
             </div>
@@ -34,18 +53,23 @@ export default function HowToBuySection() {
               </p>
             </div>
           </div>
-          {/* Horizontal Arrow for larger screens */}
           <div className="hidden md:flex absolute top-1/2 -right-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowSmRight className="text-8xl" />
+            <HiOutlineArrowSmRight
+              className={arrowClasses}
+              style={{ transitionDelay: "300ms" }}
+            />
           </div>
-          {/* Down Arrow for smaller screens */}
           <div className="md:hidden flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowDown className="text-8xl" />
+            <HiOutlineArrowDown
+              className={arrowClasses}
+              style={{ transitionDelay: "300ms" }}
+            />
           </div>
         </div>
+
         {/* Step 2 */}
         <div className="relative flex flex-col items-center">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
+          <div className={cardClasses} style={{ transitionDelay: "400ms" }}>
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <SiSolana className="text-2xl text-red-600" />
             </div>
@@ -60,17 +84,23 @@ export default function HowToBuySection() {
               </p>
             </div>
           </div>
-          {/* Vertical Arrow for larger screens */}
           <div className="hidden md:flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowSmDown className="text-8xl" />
+            <HiOutlineArrowSmDown
+              className={arrowClasses}
+              style={{ transitionDelay: "500ms" }}
+            />
           </div>
-          {/* Down Arrow for smaller screens */}
           <div className="md:hidden flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowDown className="text-8xl" />
+            <HiOutlineArrowDown
+              className={arrowClasses}
+              style={{ transitionDelay: "500ms" }}
+            />
           </div>
         </div>
+
+        {/* Mobile Step 3 */}
         <div className="relative flex flex-col items-center md:hidden block">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
+          <div className={cardClasses} style={{ transitionDelay: "600ms" }}>
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <BiSolidCoinStack className="text-2xl text-red-600" />
             </div>
@@ -83,21 +113,17 @@ export default function HowToBuySection() {
               </p>
             </div>
           </div>
-          {/* Left Arrow for larger screens */}
-          <div className="hidden md:flex absolute top-1/2 -left-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowSmLeft className="text-8xl" />
-          </div>
-          {/* Down Arrow for smaller screens */}
-          <div className="md:hidden flex absolute top-1/2 -left-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowDown className="text-8xl" />
-          </div>
           <div className="md:hidden flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowDown className="text-8xl" />
+            <HiOutlineArrowDown
+              className={arrowClasses}
+              style={{ transitionDelay: "700ms" }}
+            />
           </div>
         </div>
-        {/* Step 3 */}
+
+        {/* Desktop Step 3 */}
         <div className="relative flex flex-col items-center md:block hidden">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
+          <div className={cardClasses} style={{ transitionDelay: "600ms" }}>
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <IoMdSwap className="text-2xl text-red-600" />
             </div>
@@ -113,14 +139,11 @@ export default function HowToBuySection() {
               </p>
             </div>
           </div>
-          {/* Down Arrow for smaller screens */}
-          <div className="md:hidden flex absolute -bottom-[6.5rem] left-1/2 transform -translate-x-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowDown className="text-8xl" />
-          </div>
         </div>
-        {/* Step 4 */}
+
+        {/* Desktop Step 4 */}
         <div className="relative flex flex-col items-center md:block hidden">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
+          <div className={cardClasses} style={{ transitionDelay: "800ms" }}>
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <BiSolidCoinStack className="text-2xl text-red-600" />
             </div>
@@ -133,17 +156,17 @@ export default function HowToBuySection() {
               </p>
             </div>
           </div>
-          {/* Left Arrow for larger screens */}
           <div className="hidden md:flex absolute top-1/2 -left-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowSmLeft className="text-8xl" />
-          </div>
-          {/* Down Arrow for smaller screens */}
-          <div className="md:hidden flex absolute top-1/2 -left-[6.5rem] transform -translate-y-1/2 text-yellow-200 items-center">
-            <HiOutlineArrowDown className="text-8xl" />
+            <HiOutlineArrowSmLeft
+              className={arrowClasses}
+              style={{ transitionDelay: "900ms" }}
+            />
           </div>
         </div>
+
+        {/* Mobile Step 4 */}
         <div className="relative flex flex-col items-center md:hidden block">
-          <div className="flex items-start gap-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white border-opacity-20 w-full lg:h-52 h-72">
+          <div className={cardClasses} style={{ transitionDelay: "800ms" }}>
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <IoMdSwap className="text-2xl text-red-600" />
             </div>
@@ -159,7 +182,6 @@ export default function HowToBuySection() {
               </p>
             </div>
           </div>
-          {/* Down Arrow for smaller screens */}
         </div>
       </div>
     </section>

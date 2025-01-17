@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { FaFire } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
@@ -15,9 +15,12 @@ const TokenomicsPage = () => {
       className="min-h-screen  bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 flex flex-col items-center py-16 px-4 overflow-hidden"
     >
       <div className="w-full h-11"></div>
-      <h1 className="sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16">
+      <h2
+        className={`sm:text-6xl md:text-7xl text-5xl font-extrabold text-yellow-200 mb-16 transition-all duration-700 
+        ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      >
         Tokenomics
-      </h1>
+      </h2>
 
       {/* Main Content Container */}
       <div className="max-w-6xl w-full">
@@ -27,7 +30,7 @@ const TokenomicsPage = () => {
             <div className="bg-yellow-200 p-4 rounded-xl shadow-lg">
               <FaFire className="text-3xl text-red-600 animate-pulse" />
             </div>
-            <h2 className="text-4xl font-bold text-yellow-200">
+            <h2 className="sm:text-4xl text-3xl font-bold text-yellow-200">
               Burning Schedule
             </h2>
           </div>
@@ -41,9 +44,9 @@ const TokenomicsPage = () => {
                 </h3>
                 <p className="text-white/90 leading-relaxed">
                   $HOT implements a strategic 5% token burn for every milestone
-                  reached on pump.fun . This deflationary mechanism helps increase
-                  the value of remaining tokens while rewarding long-term
-                  holders.
+                  reached on pump.fun . This deflationary mechanism helps
+                  increase the value of remaining tokens while rewarding
+                  long-term holders.
                 </p>
               </div>
 
