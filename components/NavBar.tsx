@@ -36,7 +36,7 @@ function NavBar() {
           {/* Action Buttons */}
           <div className="space-x-4 sm:block hidden ">
             <button className="bg-white text-red-600 px-4 py-2 rounded-md hover:bg-gray-100 transition">
-              <Link href="#buy-now" className="font-bold">
+              <Link href="https://pump.fun/coin/CRH8TaaFWVsTZ2DpXMkoJzs5XKNSjR3jvPi3hBFjpump" className="font-bold">
                 Buy Now
               </Link>
             </button>

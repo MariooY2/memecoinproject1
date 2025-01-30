@@ -46,8 +46,8 @@ function HeroSection() {
           {/* Social Icons */}
           <div className="flex space-x-4 justify-center md:justify-start">
             {[
-              { href: "https://t.me/+bgJzveg8wJE1NDFk", Icon: BsTelegram },
-              { href: "https://x.com/H0TMEME", Icon: BsTwitterX },
+              { href: "https://t.me/HOTMOJI", Icon: BsTelegram },
+              { href: "https://x.com/HOTMOJI_CRYPTO", Icon: BsTwitterX },
               { href: "#website", Icon: FaGlobe },
               { href: "#chart", Icon: FaChartLine },
             ].map(({ href, Icon }, index) => (
