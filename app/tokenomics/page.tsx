@@ -43,7 +43,7 @@ const TokenomicsPage = () => {
                   Burn Mechanism
                 </h3>
                 <p className="text-white/90 leading-relaxed">
-                  $HOT implements a strategic 5% token burn for every milestone
+                  $HOT implements a strategic 2% token burn for every milestone
                   reached on pump.fun . This deflationary mechanism helps
                   increase the value of remaining tokens while rewarding
                   long-term holders.
@@ -86,9 +86,9 @@ const TokenomicsPage = () => {
                 >
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white font-semibold">
-                      First 1000 Holders
+                      Graduation on Raydium
                     </span>
-                    <span className="text-yellow-200 font-bold">5% Burn</span>
+                    <span className="text-yellow-200 font-bold">2% Burn</span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-4">
                     <div className="bg-gradient-to-r from-red-500 to-yellow-300 h-4 rounded-full w-1/4 animate-pulse"></div>
@@ -106,7 +106,7 @@ const TokenomicsPage = () => {
                     <span className="text-white font-semibold">
                       $1M Market Cap
                     </span>
-                    <span className="text-yellow-200 font-bold">5% Burn</span>
+                    <span className="text-yellow-200 font-bold">2% Burn</span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-4">
                     <div className="bg-gradient-to-r from-red-500 to-yellow-300 h-4 rounded-full w-2/4 animate-pulse"></div>
@@ -124,7 +124,7 @@ const TokenomicsPage = () => {
                     <span className="text-white font-semibold">
                       5000 Holders
                     </span>
-                    <span className="text-yellow-200 font-bold">5% Burn</span>
+                    <span className="text-yellow-200 font-bold">2% Burn</span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-4">
                     <div className="bg-gradient-to-r from-red-500 to-yellow-300 h-4 rounded-full w-3/4 animate-pulse"></div>
